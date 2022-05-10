@@ -1,0 +1,41 @@
+server.c usage
+
+If no joke file passed in - 
+server.c implements a KnockKnockJoke using play-on-words of Deja Vu:
+Knock, knock.
+Who's there?
+Deja.
+Deja, who?
+Knock, knock!
+<emotion of disgust><punctuation>
+
+Testcase 1
+Client responds to 'REG|13|Knock, knock.|' from server with incorrect format
+Ex: 'REGG|12|Who's there?|'
+In this instance server should recognize the incorrect format and sends 
+to client the error message: 'ERR|M1FT|' and close the connection
+
+Testcase 2
+Client responds to 'REG|13|Knock, knock.|' from server with incorrect content length
+Ex: 'REG|8|Who's there?|'
+In this instance server should recognize the incorrect content length and send
+to client the error message: 'ERR|M1LN|' and close the connection
+
+Testcase 3
+Client responds to 'REG|13|Knock, knock.|' from server with incorrect content length
+Ex: 'REG|12|Wh0's th3r3?|'
+In this instance server should recognize the incorrect message content and send
+to client the error message: 'ERR|M1CT|' and close the connection
+
+Testcase 4
+Client responds to 'REG|5|Deja.|' from server in multiple sequential parts
+Ex: 'REG|10' then '|Deja,' then ' who?|'
+In this instance server should continue receiving from client until an error is
+recognized or the message is completely sent in the correct format
+
+Testcase 5
+Client responds to 'REG|13|Knock, knock!|' from server using expression without ending punctiation
+Ex: 'REG|4|Bruh|'
+In this instance server should recognize the lack of ending punctiation and send
+to client the error message: 'ERR|M5CT|' and close the connection
+
