@@ -31,17 +31,20 @@ PUNCHLINE(for joke 2)
 SETUP(for joke n)
 PUNCHLINE(for joke n)
 ```
+> *Here's an example:*
 
-*Here's an example:*
+> Server: "Knock, knock"
 
-Server: "Knock, knock"
+> Client: "Who's there?"
 
-Client: "Who's there?"
+> Server: `SETUP`
 
-Server: `SETUP`
+> Client: "`SETUP` who?"
 
-Client: "`SETUP` who?"
+> Server: `PUNCHLINE`
 
-Server: `PUNCHLINE`
+> Client: *insert response here*
 
-Client: *insert response here*
+The KKJ server will send an error messsage and terminate connection if the client responds with anything that does not conform to the KKJ format above
+
+
