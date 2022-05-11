@@ -15,9 +15,9 @@ Specfiy the port number to open for the client by including the port as an argum
 
 ## Playing with KKJs
 
-By default, the KKJ server will only utilize 1 joke everytime a client connects to it. Including *KKJ.txt* as an argument allows you to use the jokes formatted in the file.
+By default, the KKJ server will only use the joke everytime a client connects to it. Including *KKJ.txt* as an argument allows you to use any jokes formatted in the *KKJ.txt* file.
 
-Add your own formatted knock knock jokes to *KKJ.txt* with 
+You can add your own knock knock jokes to *KKJ.txt* by following the format below:
 
 ```
 SETUP(for joke 1)
