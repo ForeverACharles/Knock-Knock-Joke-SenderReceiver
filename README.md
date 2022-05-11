@@ -5,7 +5,7 @@ Communicate client side to a Knock Knock Joke server! written in C
 
 **On server terminal**
 
-Compile *server.c* with gcc `make` and run the KKJserver.o executable.
+Compile *server.c* with gcc `make` and run the `KKJserver.o` executable.
 Specfiy the port number to open for the server by including the port as an argument.
 
 **On client terminal**
