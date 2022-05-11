@@ -33,10 +33,10 @@ PUNCHLINE(for joke n)
 ```
 
 **Example client-server exchange:**
-> Server: "Knock, knock"  
-Client: "Who's there?"  
+> Server: Knock, knock  
+Client: Who's there?  
 Server: `SETUP`  
-Client: "`SETUP` who?"  
+Client: `SETUP` who?  
 Server: `PUNCHLINE`  
 Client: *insert response here*
 
